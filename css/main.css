@@ -1,44 +1,114 @@
 
 
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,700,300);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
 
-/* fullscreen setup */
-html, body {
-/* give this to all tags from html to .fullscreen */
-    height:100%;
-    font-family: 'Roboto', sans-serif;
+body#background {
+  background: url('../img/image1.jpg') no-repeat 50% 50% fixed; 
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  font-family: 'Roboto', sans-serif;
+  color:white;
+  background-color: red;
+
+}
+/**font-family: 'Lato', sans-serif;**/
+/**font-family: 'Roboto', sans-serif;**/
+
+.fullscreenDiv {
+    width: 100%;
+    height: auto;
+    bottom: 0px;
+    top: 0px;
+    left: 0;
+    position: absolute;    
+
+}
+.center {
+    position: absolute;
+    border: 1px solid white;
+    width: 400px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    /*margin-top: -25px;
+    margin-left: -50px;*/
+    margin-top: -20px;
+    margin-left: -214px;
+    opacity:1!important;
+
 }
 
-/* background setup */
-.background {
-	background-image:url('img/countryside-journey-mountains-3184.jpg');
-    background-repeat:no-repeat;
-    /* custom background-position */
-    background-position:50% 50%;
-    /* ie8- graceful degradation */
-    background-position:50% 50%9 !important;
+.fullscreenDiv p{
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  color: rgb(204, 204, 204);
+  display: block;
+  font-family: Lora, Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  font-weight: normal;
+  height: 46px;
+  line-height: 23.7999992370605px;
+  margin-bottom: 23px;
+  text-align: center;
+  width: 366px;
 }
 
-.fullscreen,
-.content-a {
-    width:100%;
-    min-height:100%;
+.circle{
+    border-radius:100%;
 }
-.not-fullscreen,
-.not-fullscreen .content-a,
-.fullscreen.not-overflow,
-.fullscreen.not-overflow .content-a {
-    height:100%;
-    overflow:hidden;
-}
-
-/* content centering styles */
-.content-a {
-    display:table;
-}
-.content-b {
-    display:table-cell;
-    position:relative;
-    vertical-align:middle;
+.align-center{
     text-align:center;
+}
+
+.social{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.social a{
+    color:white;
+    padding:12px;
+    border-radius: 100%;
+    border:1px solid rgba(255,255,255,0.247059);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.social a:hover{
+    color:white;
+    padding:12px;
+    border-radius: 100%;
+    border:1px solid rgba(255,255,255,1);
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.facebook{
+    border:1px solid rgba(255,255,255,0.247059);
+    border-radius:100%;
+    padding:15px;    
+    display:inline;
+}
+
+.twitter{
+    border:1px solid rgba(255,255,255,0.247059);
+    border-radius:100%;
+    padding:15px;
+    display:inline;
+}
+
+.linkedin{
+    border:1px solid rgba(255,255,255,0.247059);
+    border-radius:100%;
+    padding:15px;
+    display:inline;
 }
