@@ -124,8 +124,8 @@ jQuery(document).ready(function(event){
       TweenLite.to(phone,1,{delay:1.2,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
       TweenLite.to(message,1,{delay:1.6,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
       TweenLite.to(button ,1,{delay:2,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
-      TweenLite.to(span1 ,1,{delay:2.4,right:'0%',force3D:true,ease:Bounce.easeOut});
-      TweenLite.to(span2 ,1,{delay:2.4,left:'0%',force3D:true,ease:Bounce.easeOut});
+      TweenLite.to(span1 ,1,{delay:2.4,right:'0vw',force3D:true,ease:Bounce.easeOut});
+      TweenLite.to(span2 ,1,{delay:2.4,left:'0vw',force3D:true,ease:Bounce.easeOut});
 
 
 
