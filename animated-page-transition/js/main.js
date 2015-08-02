@@ -55,21 +55,89 @@ jQuery(document).ready(function(event){
         $('body').removeClass('page-is-changing');
         $('.cd-loading-bar').one('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend', function(){
           isAnimating = false;
+
           $('.cd-loading-bar').off('webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend');
+          if(url=='contact.html'){
+            var name=$('.name');
+        var span=$('.name span');
+        var contact_div=$('.contact-div');
+        TweenLite.to(contact_div,0,{color:'#212121',opacity:0,zIndex:99});
+        TweenLite.to(name,0,{color:'#212121',opacity:0,zIndex:99});
+        TweenLite.to(span,0,{color:'#212121'});
+
+        var boton=$('.hola');
+        TweenLite.to(boton, 1, {delay:1,left:0,ease:Bounce.easeOut,force3D:true,onComplete: hola});
+
+        }
         });
 
         if( !transitionsSupported() ) isAnimating = false;
       }, delay);
+
+      console.log(url);
+      
+        
+      
       
       if(url!=window.location && bool){
         //add the new page to the window.history
         //if the new page was triggered by a 'popstate' event, don't add it
         window.history.pushState({path: url},'',url);
       }
+
 		});
+
   }
 
   function transitionsSupported() {
     return $('html').hasClass('csstransitions');
   }
+
+ function hola(){
+        var name=$('.name');
+        var span=$('.name span');
+        var contact_div=$('.contact-div');
+        TweenLite.to(name,1,{opacity:1});
+        TweenLite.to(name,1,{color:'#ffffff',onComplete:TweenLite.to(span,1,{color:'#555255'})});
+        TweenLite.to(name,1,{color:'#ffffff',onComplete:completeBouncle});
+
+      } 
+      function completeBouncle(){
+        var span=$('.name span');
+        var contact_div=$('.contact-div');
+        TweenLite.to(span,1,{color:'#555255'});
+        var tl = new TimelineLite();
+        tl.to(contact_div, 1, { autoAlpha:1}); 
+         var span=$('.name span');
+        var contact_div=$('.contact-div');
+        TweenLite.to(span,1,{color:'#555255'});
+        var fullname=$('input[name="fullname"]');
+        var phone=$('input[name="phone"]');
+        var email=$('input[name="email"]');
+        var message=$('textarea');
+        var button=$('button[type="submit"]');
+         var span1=$('.title span:first-child');
+        var span2=$('.title span:nth-child(2)');
+
+      TweenLite.to(fullname,1,{delay:0.4,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
+      TweenLite.to(email,1,{delay:0.8,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
+      TweenLite.to(phone,1,{delay:1.2,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
+      TweenLite.to(message,1,{delay:1.6,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
+      TweenLite.to(button ,1,{delay:2,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
+      TweenLite.to(span1 ,1,{delay:2.4,right:'0%',force3D:true,ease:Bounce.easeOut});
+      TweenLite.to(span2 ,1,{delay:2.4,left:'0%',force3D:true,ease:Bounce.easeOut});
+
+
+
+
+      }
+
+  /*$('#pincha').click(function(){
+
+      $('.hola').toggleClass('change');
+        });*/
+
 });
+
+
+
