@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <title>Roberto Morgado Luengo</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -20,10 +20,14 @@
     <!--animation-->
     <link href="css/animation.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+	<link href="css/imagelightbox.css" rel="stylesheet" type="text/css" />
+
+    <!--lightbox-->
+    <!--<link href="css/lightbox.css" rel="stylesheet" type="text/css">-->
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,10 +35,91 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	<script type="text/javascript" src="js/TweenMax.js"></script>
+	<script type="text/javascript" src="js/plugins/ScrollToPlugin.js"></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="js/queryloader2.min.js"></script>
+	<!--<script type="text/javascript" src="js/lightbox.js"></script>-->
+	<script src="js/imagelightbox.js"></script>
+	<script src="js/imagelightboxfunctions.js"></script>
+
+
+
+
+<script type="text/javascript">
+    window.addEventListener('DOMContentLoaded', function() {
+        new QueryLoader2(document.querySelector("body"), {
+            barColor: "#efefef",
+            backgroundColor: "#111",
+            percentage: true,
+            barHeight: 1,
+            minimumTime: 200,
+            fadeOutTime: 1000
+        });
+    });
+</script>
+
+
+
+
+
+<script>
+$(function() {
+   
+    
+    $(".link2about").bind('click', { id: '#about' }, scroller);
+    
+    function scroller(event){
+        var scrollYPos = $(event.data.id).offset().top;
+        event.preventDefault();
+        TweenLite.to(window, 2, {scrollTo:{y:scrollYPos, x:0}, ease:Power4.easeOut})
+        }   
+   
+});
+  </script>
+
+
+
+  <script type="text/javascript">
+    $(function(){   
+
+        var $window = $(window);
+    var scrollTime = 0.5;
+    var scrollDistance = 300;
+
+    $window.on("mousewheel DOMMouseScroll", function(event){
+
+        event.preventDefault(); 
+
+        var delta = event.originalEvent.wheelDelta/120 || -event.originalEvent.detail/3;
+        var scrollTop = $window.scrollTop();
+        var finalScroll = scrollTop - parseInt(delta*scrollDistance);
+
+        TweenMax.to($window, scrollTime, {
+            scrollTo : { y: finalScroll, autoKill:true },
+                ease: Power1.easeOut,
+                overwrite: 5                            
+            });
+
+    });
+});
+  </script>
+
+
+
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+
+<div id="loader-wrapper">
+    <div id="loader"></div>
+ 
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+ 
+</div>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -49,20 +134,20 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse animated fadeInDown delay-four">
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse animated fadeInDown delay-three">
                 <ul class="nav navbar-nav">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                     <li class="hidden">
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#about">About</a>
+                        <a class="page-scroll" href="#about">BIO</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll" href="#works">TRABAJOS</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#contact">CONTACTO</a>
                     </li>
                 </ul>
             </div>
@@ -80,7 +165,7 @@
                         <h1 class=" title_prin opacity_7 animated fadeInLeft delay-three">Roberto Morgado Luengo</h1>
                         <p class="intro-text2 animated fadeInRight delay-three">
                             Ingeniería Informática-Desarrollo Hardware y Software.</br>
-                            Desarrollo Front-end - Back-end y Diseño.
+                            Desarrollo Web Front-end - Back-end y Diseño
                         </p>
                          <div class="social">
                             <a  class="animated fadeInRight delay-three-1" href=""><i class="fa fa-facebook fa-fw "></i></a>
@@ -88,7 +173,10 @@
                             <a  class="animated fadeInRight delay-three-3" href=""><i class="fa fa-linkedin fa-fw "></i></a>
                         </div>
 
-                        <a href="#about" class="btn btn-circle page-scroll animated fadeInRight delay-one" style=" margin-top:20%;">
+                        <a href="#about" class="btn btn-circle link2about animated fadeInRight delay-one" style=" margin-top:20%;">
+                            <i class="fa fa-angle-double-down animated"></i>
+                        </a>
+                        <a href="#about" class="btn btn-circle page-scroll animated fadeInRight delay-one" style="color:red; margin-top:20%;">
                             <i class="fa fa-angle-double-down animated"></i>
                         </a>
                     </div>
@@ -105,30 +193,96 @@
                 <p>Grayscale is a free Bootstrap 3 theme created by Start Bootstrap. It can be yours right now, simply download the template on <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.</p>
                 <p>This theme features stock photos by <a href="http://gratisography.com/">Gratisography</a> along with a custom Google Maps skin courtesy of <a href="http://snazzymaps.com/">Snazzy Maps</a>.</p>
                 <p>Grayscale includes full HTML, CSS, and custom JavaScript files along with LESS files for easy customization.</p>-->
-                <h2 class="sub_title_h2 text-left quote">CREATING,
-                TIGHTLY,
-                HEART AND MIND</h2>
+                <h2 class="sub_title_h2 text-left quote">Creatividad, diseño y funcionalidad</h2>
 
                 <p class="text-left text-quote">
                 Soy un apasionado de la informática,la programación y el hardware que siempre está aprendiendo cosas nuevas y renovando conocimientos.<br>
-                Dedico tanto mi tiempo libre como mi trabajo a diseñar y desarrollar páginas y aplicaciones web(Front-end y Backend) como programas para dispositivos móviles.Me encanta arreglar ordenadores y todo lo que tenga que ver con dispositivos móviles.<br>
-                Actualmente me encuentro realizando el último curso de la universidad, en concreto el TFG del Grado en Ingeniería Informática de Computadores en la Universidad Complutense de Madrid.</p>
-                <p class="text-quote" style="border-bottom:0px">Habilidades<p>
-                <ul class="text-quote">
-                    <li>Javascript / Jquery</li>
-                    <li>HTML 5 / Css 3 / XHTML</li>
-                    <li>PHP / MYSQL</li>
-                    <li>WORDPRESS</li>
-                    <li>BOOTSTRAP</li>
-                    <li>C++</li>
-                    <li>JAVA / ANDROID</li>
-                    <li>PHOTOSHOP / INDESIGN</li>
-                </ul>
-            </div>   
+                Dedico tanto mi tiempo libre como mi trabajo a diseñar y desarrollar páginas y aplicaciones web (Front-end y Backend) como Software para dispositivos móviles.<br>
+                Me encanta todo lo que tenga que ver con la tecnología , ordenadores y dispositivos móviles.<br>
+                Actualmente me encuentro realizando el último curso de la universidad, en concreto el TFG del Grado en Ingeniería Informática de Computadores en la Universidad Complutense de Madrid.</p> 
+                <div class="col-lg-6" id="skills">
+                    <ul class="" style="border-bottom:0px">
+                        <li style="font-weight:500">HABILIDADES</li>
+                        <li style="width:100%">Javascript / Jquery / AJAX</li>
+                        <li style="width:95%">HTML 5 / CSS 3 / XHTML</li>
+                        <li style="width:55%">PHP / MYSQL</li>
+                        <li style="width:50%">Wordpress</li>
+                        <li>OpenCart / Prestashop</li>
+                        <li style="width:50%">Bootstrap</li>
+                        <li style="width:20%">C++</li>
+                        <li style="width:70%">Java / Android</li>
+                        <li style="width:90%">Phosothop / Illustrator</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6" >
+               <img src="./img/about1_dark_volt_med.jpg" alt="" width="100%">
+            </div>       
+            
         </div>
     </section>
 
+<style>
+	
+</style>
     <!-- Download Section -->
+    <section id="works" class=" text-center" style="overflow:hidden;">
+    	<div id="works_intro" class="text-center">
+	    	<h1>Trabajos</h1>
+	    	<p>Alguno de mis trabajos o proyectos en los que he trabajado</p>
+    	</div>
+        <div>
+			<!--<div id="bungalows_club" class="col-lg-6" >
+				<a href="img/bungalowsclub.png" data-lightbox="bungalowsclub_gallery" data-title="My caption">
+					<div class="col-lg-3 col-lg-offset-5 inner-btn">
+						<h3>BungalowsClub</h3>
+					</div>	
+				</a>
+				<a href="img/bungalowsclub.png" data-lightbox="bungalowsclub_gallery"></a>
+				<a href="img/bungalowsclub.png" data-lightbox="bungalowsclub_gallery"></a>
+
+			</div>-->
+				<!--<div class="col-lg-8 col-lg-offset-2" id="gallery">
+			        <ul>
+						<li><a href="img/20.jpg" data-imagelightbox="g"><img src="img/20.jpg" width="40" height="40" alt="Afternoon in Klaipeda"></a></li>
+						<li ><a href="img/20.jpg" data-imagelightbox="g"><img style="display:none" src="img/20.jpg" width="40" height="40" alt="Klaipeda from Smiltyne side"></a></li>
+						<li><a href="img/20.jpg" data-imagelightbox="g"><img style="display:none" src="img/20.jpg" width="40" height="40" alt="Some kind of bird, hopefully"></a></li>
+					</ul>
+				</div>-->
+			
+			<div id="bungalows_club" class="col-lg-6" id="gallery">
+					<div href="img/bungalowsclub.png" data-imagelightbox="Bungalow" class="col-lg-6 col-lg-offset-4 col-lg-5 col-lg-offset-5 inner-btn">
+						<a class="display:none" href="img/bungalowsclub.png" data-imagelightbox="Bungalow"><h3>BungalowsClub</h3></a>
+					</div>
+			</div>
+			<a class="display:none" href="img/bungalowsclub_search.png" data-imagelightbox="Bungalow"></a>	
+			<a class="display:none" href="img/bungalowsclub_single.png" data-imagelightbox="Bungalow"></a>
+			
+    		<div id="villamadrid" class="col-lg-6">
+    			<div class="col-lg-6 col-lg-offset-4 col-lg-5 col-lg-offset-5 inner-btn">
+    				<a class="display:none" href="img/hotel_villamadrid.png" data-imagelightbox="Villamadrid"><h3>Hotel Villamdrid</h3></a>
+    			</div>
+			</div>
+			<a class="display:none" href="img/hotel_villamadrid_sitios.png" data-imagelightbox="Villamadrid"></a>
+			<a class="display:none" href="img/hotel_villamadrid_contacto.png" data-imagelightbox="Villamadrid"></a>	
+			<a class="display:none" href="img/hotel_villamadrid_estilos.png" data-imagelightbox="Villamadrid"></a>
+			<div id="villamadrid" class="col-lg-6">
+    			<div class="col-lg-6 col-lg-offset-4 col-lg-5 col-lg-offset-5 inner-btn">
+    				<h3>Hotel Villamdrid</h3>
+    			</div>
+			</div>
+    		<div id="bungalows_club" class="col-lg-6" >
+				<div class="col-lg-6 col-lg-offset-4 col-lg-5 col-lg-offset-5 inner-btn">
+					<h3>BungalowsClub</h3>
+				</div>
+			</div>
+        	<!--<div class="col-lg-3" style="height:100vh;background:pink"></div>
+        	<div class="col-lg-3" style="height:100vh;background:green"></div>-->
+        </div>
+    </section>
+
+
+      <!-- Download Section 
     <section id="download" class="content-section text-center">
         <div class="download-section">
             <div class="container">
@@ -139,7 +293,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>-->
 
     <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
@@ -161,21 +315,212 @@
                     </li>
                 </ul>
             </div>
-        </div>
+        </div>       
     </section>
 
     <!-- Map Section -->
     <div id="map"></div>
+    <style>
+    #form{
+    	padding-top: 20px;
+  		padding-bottom: 20px;
+        background: rgba(0,0,0,0.2);
+        position:relative;
+        bottom: 500px;
+        display:block;
+        text-align: center;
+        font-family: "Jura-Regular";
+        font-size: 14pt;
+        border:solid 1px #ccc;
+        letter-spacing: 1px;
+		
+    }
 
-    <!-- Footer -->
+    #form p{
+
+	  margin: 0 0 10px;
+	  font-size: 20px;
+	  line-height: 1.6;
+    }
+
+       
+
+    #form ul{
+        color:#CCC;
+        list-style: none;
+        display:inline-block;
+        letter-spacing: 0.08em;
+        padding-left: 0px;
+
+    }
+    #form li{
+     margin-bottom: 20px;
+     border-bottom: 1px solid;
+    }
+
+    #form li strong{
+     color:white;
+    }
+
+    #form li a:hover{
+     color:white;
+    }
+    #form li a{
+     color:#ccc;
+    }
+
+    #form li:first-child{
+        font-size: 18pt;
+        display:inline-block;
+        color:white;
+        border-bottom:none;
+        font-weight:500;
+    }
+
+    #form_resp{
+        display:block;
+        text-align: center;
+        font-family: "Jura-Regular";
+        font-size: 14pt;
+        border:solid 1px #ccc;
+        margin-bottom:10px;
+        margin-top: 10px;
+
+    }
+
+    #form_resp p{
+
+	  margin: 0 0 10px;
+	  font-size: 20px;
+	  line-height: 1.6;
+    }
+
+
+    #form_resp p:first-child{
+
+	  padding-top: 10px;
+	  font-size: 20px;
+	  line-height: 1.6;
+    }
+
+    #form h3{
+        font-weight: 800;
+	    margin-bottom:15px;
+        font-size: 30px;
+
+    }
+
+       
+
+    #form_resp ul{
+        color:#CCC;
+        list-style: none;
+        display:inline-block;
+        letter-spacing: 0.08em;
+
+    }
+    #form_resp li{
+     margin-bottom: 20px;
+     border-bottom: 1px solid;
+    }
+
+    #form_resp li strong{
+     color:white;
+    }
+
+    #form_resp li a:hover{
+     color:white;
+    }
+    #form_resp li a{
+     color:#ccc;
+    }
+
+    #form_resp li:first-child{
+        font-size: 18pt;
+        display:inline-block;
+        color:white;
+        border-bottom:none;
+        font-weight:500;
+        padding-left: 25%;
+    }
+
+     #form_resp li:last-child{
+        color:white;
+        border-bottom:none;
+        padding-left: 6%;
+    }
+
+  
+    </style>
+
+    <!--<div class=" hidden-xs col-md-4 col-sm-4 col-sm-offset-4 col-md-offset-4 col-lg-2 col-lg-offset-5" id="form">
+        <ul  style="border-bottom:0px">
+            <li style="padding-top:20px">Contacto</li>
+            <li style="width:90%;border:none;">Roberto Morgado Luengo</li>
+            <li style="width:85%"><strong>Email:</strong> <a href="mailto:morgadoluengo@gmail.com">Morgadoluengo@gmail.com</a></li>
+            <li style="width:70%;"><strong>Telefono:</strong> 659085824</li>
+            <li style="width:90%;border:none;margin-bottom:0px"><strong>Direccion:</strong> Embajadores 220</li>
+            <li style="width:70%">28045 Madrid,España</li>
+            <li>
+                 <div class="social">
+                    <a  class="animated fadeInRight delay-three-1" href=""><i class="fa fa-facebook fa-fw "></i></a>
+                    <a  class="animated fadeInRight delay-three-2" href=""><i class="fa fa-twitter fa-fw "></i></a>
+                    <a  class="animated fadeInRight delay-three-3" href=""><i class="fa fa-linkedin fa-fw "></i></a>
+                </div>
+            </li>
+        </ul>
+    </div>-->
+	    <div class=" hidden-xs col-md-4 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4" id="form">
+	    	<h3>Contacto</h3>
+		    <p>Roberto Morgado Luengo<br></p>
+		    <p><strong>Telefono:</strong> +34 659085824<br></p>
+			<p><strong>Direccion:</strong> Embajadores 220 28045 Madrid,España<br></p>
+			<p><strong>Email:</strong> <a href="mailto:morgadoluengo@gmail.com">Morgadoluengo@gmail.com</a></p>
+			<div class="social" style="padding:20px">
+                <a  class="animated fadeInRight delay-three-1" href=""><i class="fa fa-facebook fa-fw "></i></a>
+                <a  class="animated fadeInRight delay-three-2" href=""><i class="fa fa-twitter fa-fw "></i></a>
+                <a  class="animated fadeInRight delay-three-3" href=""><i class="fa fa-linkedin fa-fw "></i></a>
+            </div>
+		</div>
+
+
+    <!--footer-responsive-->
+    <div class=" col-xs-offset-1 col-xs-10 hidden-md hidden-lg" id="form_resp">
+        <!--<ul class="" style="border-bottom:0px">
+            <li >Contacto</li>
+            <li style="width:80%;border:none;">Roberto Morgado Luengo</li>
+            <li style="width:95%"><strong>Email:</strong> <a href="mailto:morgadoluengo@gmail.com">Morgadoluengo@gmail.com</a></li>
+            <li style="width:80%;"><strong>Telefono:</strong> +34 659085824</li>
+            <li style="width:90%;border:none;margin-bottom:0px"><strong>Direccion:</strong> Embajadores 220</li>
+            <li style="width:70%">28045 Madrid,España</li>
+            <li>
+                 <div class="social">
+                    <a  class="animated fadeInRight delay-three-1" href=""><i class="fa fa-facebook fa-fw "></i></a>
+                    <a  class="animated fadeInRight delay-three-2" href=""><i class="fa fa-twitter fa-fw "></i></a>
+                    <a  class="animated fadeInRight delay-three-3" href=""><i class="fa fa-linkedin fa-fw "></i></a>
+                </div>
+            </li>
+        </ul>-->
+        <p>Roberto Morgado Luengo<br></p>
+	    <p><strong>Telefono:</strong> +34 659085824<br></p>
+		<p><strong>Direccion:</strong> Embajadores 220 28045 Madrid,España<br></p>
+		<p><strong>Email:</strong> <a href="mailto:morgadoluengo@gmail.com">Morgadoluengo@gmail.com</a></p>
+		<div class="social" style="padding:20px">
+            <a  class="animated fadeInRight delay-three-1" href=""><i class="fa fa-facebook fa-fw "></i></a>
+            <a  class="animated fadeInRight delay-three-2" href=""><i class="fa fa-twitter fa-fw "></i></a>
+            <a  class="animated fadeInRight delay-three-3" href=""><i class="fa fa-linkedin fa-fw "></i></a>
+        </div>
+    </div>
+
+    <!-- Footer 
     <footer>
         <div class="container text-center">
             <p>Copyright &copy; Your Website 2014</p>
         </div>
-    </footer>
+    </footer>-->
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <!--<script src="js/jquery.js"></script>-->
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -188,6 +533,9 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+
+	
+
 
 </body>
 

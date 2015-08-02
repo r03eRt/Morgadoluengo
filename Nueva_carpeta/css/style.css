@@ -1,0 +1,243 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#wrap {
+    width: 1204px;
+    height: 850px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.imagem {
+    width: 1920px;
+    height: 1080px;
+    background-repeat: no-repeat;
+}
+#local #img4 {
+    background-image: url(../img/4.jpg);
+}
+#local #img8 {
+    background-image: url(../img/8.jpg);
+}
+#externo #img4 {
+    background-image: url(http://imagens.russian-women.net/papel-parede-retratos/pictures-1920-1200/Russian-pictures-wallpaper-1920-1200-Imagens-da-R%C3%BAssia-Crim%C3%A9ia-foto-Ni328625.jpg);
+}
+#externo #img8 {
+    background-image: url(http://www.ateliedetextos.com.br/imagens_alta/Interfloor/paredeWoodrusticEbanizado_pisoRusticBlack.JPG);
+}
+
+
+#works_intro{
+    height: 20vh;
+    padding-top:60px;
+}
+
+#works_intro h1{
+    margin:0px;
+    padding: 5px 0px;
+}
+
+#works_intro p{
+    margin:0px;
+    padding: 10px 0px;
+    background: black;
+    overflow: hidden;
+}
+
+
+
+
+#bungalows_club{
+    height:38vh;
+/*background: url('../img/bclogo.svg') center center no-repeat;*/
+    background: url('../img/bclogo_new.svg') center center no-repeat;    background-size: cover;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+     opacity: 0.4;
+    z-index:5;
+     filter: grayscale(1);
+     -webkit-filter: grayscale(1);
+}
+
+#bungalows_club:hover{
+     opacity: 1;
+    height:38vh;
+    /*background: url('../img/bclogo.svg') center center no-repeat;*/
+    background: url('../img/bclogo_new.svg') center center no-repeat;
+
+    background-size: cover;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+     -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+    z-index:5;
+    filter: grayscale(0);
+     -webkit-filter: grayscale(0);
+ 
+}
+#bungalows_club .inner-btn{
+    top:60%;
+    right:2%;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+     opacity: 0;
+}
+#bungalows_club:hover .inner-btn{
+    top:50%;
+    right:2%;
+    transition:all 0.8s ;
+    -webkit-transition:all 0.8s ;
+    -o-transition:all 0.8s ;
+    -moz-transition:all 0.8s ;
+     opacity: 1;
+}
+#bungalows_club a{
+
+}
+
+#bungalows_club h3{
+   
+    /*left:40%;*/
+    color:white;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+    
+     padding: 10px;
+     background: rgba(255, 255, 255, 0.49);
+     border:1px solid white;
+     cursor:pointer;
+}
+
+#bungalows_club:hover  h3{
+    /*left:40%;*/
+    color:white;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+     opacity: 1;
+     padding: 10px;
+     background: rgba(255, 255, 255, 0.49);
+     border:1px solid white;
+    cursor:pointer;
+    }
+
+#bungalows_club:hover h3:hover{
+    background: rgba(255, 255, 255, 1);
+    color:#777;
+     transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+
+
+}
+
+
+
+
+
+
+
+
+#villamadrid{
+    height:38vh;
+/*background: url('../img/bclogo.svg') center center no-repeat;*/
+    background: url('../img/villa3.png') center center no-repeat;    background-size: cover;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+     opacity: 0.4;
+    z-index:5;
+     filter: grayscale(1);
+     -webkit-filter: grayscale(1);
+}
+
+#villamadrid:hover{
+     opacity: 1;
+    height:38vh;
+    /*background: url('../img/bclogo.svg') center center no-repeat;*/
+    background: url('../img/villa3.png') center center no-repeat;
+
+    background-size: cover;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+     -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+    z-index:5;
+    filter: grayscale(0);
+     -webkit-filter: grayscale(0);
+ 
+}
+#villamadrid .inner-btn{
+    top:60%;
+    right:2%;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+     opacity: 0;
+}
+#villamadrid:hover .inner-btn{
+    top:50%;
+    right:2%;
+    transition:all 0.8s ;
+    -webkit-transition:all 0.8s ;
+    -o-transition:all 0.8s ;
+    -moz-transition:all 0.8s ;
+     opacity: 1;
+}
+
+
+#villamadrid h3{
+   
+    /*left:40%;*/
+    color:white;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+    
+     padding: 10px;
+     background: rgba(255, 255, 255, 0.49);
+     border:1px solid white;
+     cursor:pointer;
+}
+
+#villamadrid:hover  h3{
+    /*left:40%;*/
+    color:white;
+    transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+     opacity: 1;
+     padding: 10px;
+     background: rgba(255, 255, 255, 0.49);
+     border:1px solid white;
+    cursor:pointer;
+    }
+
+#villamadrid:hover h3:hover{
+    background: rgba(255, 255, 255, 1);
+    color:#777;
+     transition:all 0.5s ;
+    -webkit-transition:all 0.5s ;
+    -o-transition:all 0.5s ;
+    -moz-transition:all 0.5s ;
+
+
+}
