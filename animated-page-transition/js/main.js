@@ -66,7 +66,7 @@ jQuery(document).ready(function(event){
         TweenLite.to(span,0,{color:'#212121'});
 
         var boton=$('.hola');
-        TweenLite.to(boton, 1, {delay:1,left:0,ease:Bounce.easeOut,force3D:true,onComplete: hola});
+        TweenLite.to(boton, 1, {delay:1,left:0,ease: Power4.easeOut,force3D:true,onComplete: hola});
 
         }
         });
@@ -108,7 +108,7 @@ jQuery(document).ready(function(event){
         TweenLite.to(span,1,{color:'#555255'});
         var tl = new TimelineLite();
         tl.to(contact_div, 1, { autoAlpha:1}); 
-         var span=$('.name span');
+        var span=$('.name span');
         var contact_div=$('.contact-div');
         TweenLite.to(span,1,{color:'#555255'});
         var fullname=$('input[name="fullname"]');
@@ -116,16 +116,33 @@ jQuery(document).ready(function(event){
         var email=$('input[name="email"]');
         var message=$('textarea');
         var button=$('button[type="submit"]');
-         var span1=$('.title span:first-child');
-        var span2=$('.title span:nth-child(2)');
+        var span1=$('.span1');
+        var span2=$('.span2');
+        var interrogation=$('.span222');
 
-      TweenLite.to(fullname,1,{delay:0.4,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
-      TweenLite.to(email,1,{delay:0.8,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
-      TweenLite.to(phone,1,{delay:1.2,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
-      TweenLite.to(message,1,{delay:1.6,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
-      TweenLite.to(button ,1,{delay:2,marginLeft:'0vw',force3D:true,ease:Bounce.easeOut});
-      TweenLite.to(span1 ,1,{delay:2.4,right:'0vw',force3D:true,ease:Bounce.easeOut});
-      TweenLite.to(span2 ,1,{delay:2.4,left:'0vw',force3D:true,ease:Bounce.easeOut});
+
+      TweenLite.to(fullname,1,{delay:0.4,marginLeft:'0vw',force3D:true,ease: Power4.easeInOut});
+      TweenLite.to(email,1,{delay:0.8,marginLeft:'0vw',force3D:true,ease: Power4.easeInOut});
+      TweenLite.to(phone,1,{delay:1.2,marginLeft:'0vw',force3D:true,ease: Power4.easeInOut});
+      TweenLite.to(message,1,{delay:1.6,marginLeft:'0vw',force3D:true,ease: Power4.easeInOut});
+      TweenLite.to(button ,1,{delay:2,marginLeft:'0vw',force3D:true,ease: Power4.easeInOut});
+      TweenLite.to(span1 ,1,{delay:2.4,right:'50vw',force3D:true,ease: Power4.easeInOut});
+      TweenLite.to(span2 ,1,{delay:2.4,left:'50vw',force3D:true,ease: Power4.easeInOut});
+      TweenLite.to(span2 ,1,{delay:2.4,left:'50vw',force3D:true,ease: Power4.easeInOut});
+      var tl2 = new TimelineMax({
+        onReverseComplete:reverseRepeat,
+        onReverseCompleteParams:['{self}'],
+        onComplete:complete,
+        onCompleteParams:['{self}']
+      });
+      function reverseRepeat(tl) {
+        tl.reverse(0); // 0 sets the playhead at the end of the animation
+      }
+      function complete(tl) {
+        tl.restart(); // 0 sets the playhead at the end of the animation
+      }
+        tl.to(interrogation, 3,{ css:{color:'blue'},rotation:360, transformOrigin:"150px 150px", ease:Linear.easeNone});
+        
 
 
 

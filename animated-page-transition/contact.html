@@ -11,8 +11,8 @@
   	
 	<title>About | CodyHouse</title>
 </head>
-<body class="cd-contact">
-	<main>
+<body class="cd-contact"  style="overflow:hidden" >
+	<main >
 		<div class="cd-contact cd-main-content" >
 			<div>
 			<h1 class="name"  >Roberto Morgado Luengo <span>Web Design</span></h1>
@@ -43,7 +43,7 @@
     				top: 30%;
     				display: block;
     				width: 40%;
-    				margin: 0 30%;
+    				margin: 0 auto;
 
 				}
 				.form-content{
@@ -64,6 +64,7 @@
 					border: 0.2rem solid #cb354b;
 					margin-bottom: 1.8rem;
 					margin-left: 40vw;
+					font-family: 'Proxima_Nova', sans-serif;
 				}
 
 				textarea{
@@ -73,31 +74,31 @@
 					border: 0.2rem solid #cb354b;
 					margin-bottom: 1.8rem;
 					resize:none;
-										margin-left: 40vw;
-
+					margin-left: 40vw;
+					font-family: 'Proxima_Nova', sans-serif;
 				}
 
 				::-webkit-input-placeholder {
 				   color: #cb354b;
-				   font-size: 12px;
+				   font-size: 14px;
 				   margin:14px;
 				}
 
 				:-moz-placeholder { /* Firefox 18- */
 				   color: #cb354b;
-				   font-size: 12px;
+				   font-size: 14px;
 				   margin:14px;  
 				}
 
 				::-moz-placeholder {  /* Firefox 19+ */
 				   color: #cb354b;
-				   font-size: 12px;
+				   font-size: 14px;
 				   margin:14px;  
 				}
 
 				:-ms-input-placeholder {  
 				   color: #cb354b;
-				   font-size: 12px;
+				   font-size: 14px;
 				   margin:14px;  
 				}
 				button[type="submit"]{
@@ -109,6 +110,8 @@
 					cursor: pointer;
 					font-weight: 600;
 					margin-left: 40vw;
+					font-family: 'Proxima_Nova', sans-serif;
+					font-size: 14px;
 
 
 				}
@@ -117,16 +120,29 @@
 					color:#212121;
 
 				}
-				.title{
-					z-index: 999;
+
+   				.span1{
+					z-index: 9999;
 					color:red;
-					margin: auto;
   					position: absolute;
-   					left: 0;
-   					right: 0;
    					top:15%;
-   					font-size: 5.0rem;			}
+   					font-size: 5.0rem;
+   					display: block;
+
+   				}
+   				.span2{
+					z-index: 99;
+					color:red;
+  					position: absolute;
+   					top:15%;
+   					font-size: 5.0rem;
+   					display: block;
+
+   				}
 				</style>
+
+					<div class="span1" style="color:#212121;right: 100vw;">What would yo</div>
+					<div class="span2" style="color:#cb354b;left: 150vw;">u like to know <span class="span222">?</span></div>
 				
 
 				<div class="contact-div">
