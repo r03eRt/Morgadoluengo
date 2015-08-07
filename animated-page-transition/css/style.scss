@@ -133,6 +133,7 @@ Patterns - reusable parts of our design
 .cd-work .cd-btn {
     background-color: #212121;
 }
+
 .cd-contact .cd-btn {
     background-color: #212121;
 }
@@ -380,12 +381,15 @@ main .cd-main-content.cd-contact::before {
 .cd-about .cd-cover-layer {
     background-color: #283040;
 }
+
 .cd-work .cd-cover-layer {
     background-color: #283040;
 }
+
 .cd-contact .cd-cover-layer {
     background-color: #283040;
 }
+
 .page-is-changing .cd-cover-layer {
     opacity: 1;
     visibility: visible;
@@ -436,6 +440,7 @@ main .cd-main-content.cd-contact::before {
 .cd-about .cd-loading-bar::before {
     background-color: #FF425E;
 }
+
 .cd-work .cd-loading-bar {
     background-color: #212121;
 }
@@ -504,20 +509,162 @@ main .cd-main-content.cd-contact::before {
     transition: transform 0.8s 0.8s ease-in;
 }
 
-
-.hola{
-    background:#cb354b;height: 100vh;width:50vw;position:absolute;top:0;
+.hola {
+    background: #cb354b;
+    height: 100vh;
+    width: 50vw;
+    position: absolute;
+    top: 0;
     left: -50vw;
     z-index: 0;
 }
 
-strong{
-    font-weight:bold;
+strong {
+    font-weight: bold;
+    font-size: 3rem;
 }
+
 @media only screen and (min-width: 768px) {
     .cd-loading-bar {
         width: calc(100% - 40px);
     }
+}
+
+/**contact**/
+.contact-div {
+    width: 48vw;
+    height: 90vh;
+    float: left;
+    position: relative;
+}
+
+.form-div {
+    width: 48vw;
+    float: right;
+    position: relative;
+    height: 90vh;
+}
+
+.contact-content {
+    text-align: center !important;
+    position: relative;
+    top: 30%;
+    display: inline-block;
+    /* width: 100%; */
+    /* margin: 0 auto; */
+}
+
+.form-content {
+    text-align: center !important;
+    position: relative;
+    top: 25%;
+    display: block;
+    width: 50%;
+    margin: 0 25%;
+}
+
+.contact-content p {
+    line-height: initial;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    padding: 1.2rem;
+    border: 0.2rem solid #cb354b;
+    margin-bottom: 1.8rem;
+    margin-left: 40vw;
+    font-family: 'Proxima_Nova', sans-serif;
+}
+
+textarea {
+    width: 100%;
+    background: transparent;
+    padding: 1.2rem;
+    border: 0.2rem solid #cb354b;
+    margin-bottom: 1.8rem;
+    resize: none;
+    margin-left: 40vw;
+    font-family: 'Proxima_Nova', sans-serif;
+}
+
+::-webkit-input-placeholder {
+    color: #cb354b;
+    font-size: 14px;
+    margin: 14px;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #cb354b;
+    font-size: 14px;
+    margin: 14px;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #cb354b;
+    font-size: 14px;
+    margin: 14px;
+}
+
+:-ms-input-placeholder {
+    color: #cb354b;
+    font-size: 14px;
+    margin: 14px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: transparent;
+    padding: 1.2rem;
+    border: 0.2rem solid #cb354b;
+    color: #cb354b;
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 40vw;
+    font-family: 'Proxima_Nova', sans-serif;
+    font-size: 14px;
+}
+
+button[type="submit"]:hover {
+    background: #cb354b;
+    color: #212121;
+}
+
+.span1 {
+    z-index: 9999;
+    color: red;
+    position: absolute;
+    top: 15%;
+    font-size: 5.0rem;
+    display: block;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.span2 {
+    z-index: 99;
+    color: red;
+    position: absolute;
+    top: 15%;
+    font-size: 5.0rem;
+    display: block;
+    opacity: 0;
+}
+
+.social {
+    margin-top: 1.5rem;
+    /*width: 50%;*/
+    text-align: center;
+    display: block;
+}
+
+.social i {
+    font-size: 3.0rem;
+    cursor: pointer;
+    margin: 0 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
