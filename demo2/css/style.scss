@@ -49,7 +49,10 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
+<<<<<<< HEAD
     cursor:default;
+=======
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 a {
@@ -114,10 +117,13 @@ h1 a:hover {
     }
 }
 
+<<<<<<< HEAD
 .mobile-nav {
     display: none;
 }
 
+=======
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 .menu {
     position: absolute;
     top: 0;
@@ -127,12 +133,17 @@ h1 a:hover {
     .menu_item {
         color: #555255;
         padding: 0 2.0rem;
+<<<<<<< HEAD
         font-size: 2.2rem;
         font-weight: bold;
         line-height: initial;
         // font-weight: 300;
         text-shadow: #211d1c 1px 1px, #1d1d1d 2px 2px, #1e1e1d 3px 3px, #1f1f1e 4px 4px, #1f1f1e 5px 5px, #20201f 6px 6px, #20201f 7px 7px, #212020 8px 8px, #212020 9px 9px, #212121 10px 10px;
         background: #252525;
+=======
+        font-size: 2.0rem;
+        font-weight: bold;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
         &.menu_item_current {
             color: #cb354b !important;
         }
@@ -163,6 +174,7 @@ Patterns - reusable parts of our design
 }
 
 .cd-about .cd-btn {
+<<<<<<< HEAD
     background: #252525 !important;
 }
 
@@ -172,6 +184,17 @@ Patterns - reusable parts of our design
 
 .cd-contact .cd-btn {
     background: #252525 !important;
+=======
+    background-color: #212121;
+}
+
+.cd-work .cd-btn {
+    background-color: #212121;
+}
+
+.cd-contact .cd-btn {
+    background-color: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 /* -------------------------------- 
@@ -231,7 +254,11 @@ body.page-is-changing::after, body.page-is-changing::before {
 }
 
 main {
+<<<<<<< HEAD
     //height: 100vh;
+=======
+    height: 100vh;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     /*padding: 10px;*/
     text-align: center;
 }
@@ -293,7 +320,11 @@ main .cd-main-content.cd-index::before {
 
 main .cd-main-content.cd-about {
     /* .cd-main-content basic style - about page */
+<<<<<<< HEAD
     background-color: #252525;
+=======
+    background-color: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 main .cd-main-content.cd-about > div {
@@ -323,7 +354,11 @@ main .cd-main-content.cd-about::before {
 
 main .cd-main-content.cd-work {
     /* .cd-main-content basic style - work page */
+<<<<<<< HEAD
     background: #252525 !important;
+=======
+    background-color: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 main .cd-main-content.cd-work > div {
@@ -344,7 +379,11 @@ main .cd-main-content.cd-work::before {
 
 main .cd-main-content.cd-contact {
     /* .cd-main-content basic style - contact page */
+<<<<<<< HEAD
     background: #252525 !important;
+=======
+    background-color: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 main .cd-main-content.cd-contact > div {
@@ -449,7 +488,11 @@ main .cd-main-content.cd-contact::before {
     top: 50%;
     height: 6px;
     width: 90%;
+<<<<<<< HEAD
     background-color: #252525;
+=======
+    background-color: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     visibility: hidden;
     -webkit-transition: visibility 0s 0.4s, -webkit-transform 0.4s 0s ease-in;
     -moz-transition: visibility 0s 0.4s, -moz-transform 0.4s 0s ease-in;
@@ -470,7 +513,11 @@ main .cd-main-content.cd-contact::before {
 }
 
 .cd-about .cd-loading-bar {
+<<<<<<< HEAD
     background-color: #252525;
+=======
+    background-color: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 .cd-about .cd-loading-bar::before {
@@ -548,15 +595,26 @@ main .cd-main-content.cd-contact::before {
 .hola {
     background: #cb354b;
     height: 100vh;
+<<<<<<< HEAD
     width: 0vw;
     position: absolute;
     top: 0;
     //left: -50vw;
+=======
+    width: 50vw;
+    position: absolute;
+    top: 0;
+    left: -50vw;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     z-index: 0;
 }
 
 strong {
+<<<<<<< HEAD
     font-weight: 500;
+=======
+    font-weight: bold;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     font-size: 3rem;
 }
 
@@ -575,7 +633,10 @@ strong {
     top: 0;
     left: -50vw;
     background: #CB344B;
+<<<<<<< HEAD
     display: none;
+=======
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 .form-div {
@@ -613,10 +674,15 @@ input {
     padding: 1.2rem;
     border: 0.2rem solid #cb354b;
     margin-bottom: 1.8rem;
+<<<<<<< HEAD
     //margin-left: 40vw;
     font-family: 'Proxima_Nova', sans-serif;
     position: relative;
     left: 50vw;
+=======
+    margin-left: 40vw;
+    font-family: 'Proxima_Nova', sans-serif;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 textarea {
@@ -626,8 +692,12 @@ textarea {
     border: 0.2rem solid #cb354b;
     margin-bottom: 1.8rem;
     resize: none;
+<<<<<<< HEAD
     left: 40vw;
     position: relative;
+=======
+    margin-left: 40vw;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     font-family: 'Proxima_Nova', sans-serif;
 }
 
@@ -666,8 +736,12 @@ button[type="submit"] {
     font-size: 1.2rem;
     cursor: pointer;
     font-weight: 600;
+<<<<<<< HEAD
     position: relative;
     left: 40vw;
+=======
+    margin-left: 40vw;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     font-family: 'Proxima_Nova', sans-serif;
     font-size: 14px;
 }
@@ -711,6 +785,7 @@ button[type="submit"]:hover {
     margin: 0 5px;
 }
 
+<<<<<<< HEAD
 @-webkit-keyframes shakeit {
     0% {
         -webkit-transform: rotate(0deg) translate(2px, 1px);
@@ -794,14 +869,29 @@ button[type="submit"]:hover {
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
+=======
+.photo-div {
+    width: 90vw;
+    float: left;
+    position: absolute;
+    height: 80vh;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 .photo-div-inner {
     top: 10%;
+<<<<<<< HEAD
     background-image: url("../img/morgado252525_short.png");
     background-size: 80%;
     background-repeat: no-repeat;
     width: 50vw;
+=======
+    background-image: url("../img/morgado.png");
+    background-size: 50%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     opacity: 1;
     position: absolute;
     left: 0;
@@ -810,13 +900,21 @@ button[type="submit"]:hover {
 }
 
 .about-div {
+<<<<<<< HEAD
     top: 10%;
+=======
+    top: 20%;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     width: 48vw;
     float: right;
     position: relative;
     height: 70vh;
     color: #9d9d9d;
+<<<<<<< HEAD
     padding-right: 4rem;
+=======
+    padding-right: 14rem;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 .about-div p {
@@ -832,8 +930,11 @@ button[type="submit"]:hover {
     line-height: initial;
     font-size: 4.0rem;
     font-weight: 300;
+<<<<<<< HEAD
     text-shadow: #211d1c 1px 1px, #1d1d1d 2px 2px, #1e1e1d 3px 3px, #1f1f1e 4px 4px, #1f1f1e 5px 5px, #20201f 6px 6px, #20201f 7px 7px, #212020 8px 8px, #212020 9px 9px, #212121 10px 10px;
     background: #252525;
+=======
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 .about-div h3 {
@@ -844,8 +945,11 @@ button[type="submit"]:hover {
     text-align: left;
     line-height: initial;
     font-weight: 300;
+<<<<<<< HEAD
     text-shadow: #211d1c 1px 1px, #1d1d1d 2px 2px, #1e1e1d 3px 3px, #1f1f1e 4px 4px, #1f1f1e 5px 5px, #20201f 6px 6px, #20201f 7px 7px, #212020 8px 8px, #212020 9px 9px, #212121 10px 10px;
     background: #252525;
+=======
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 .about-div .list-div {
@@ -856,14 +960,21 @@ button[type="submit"]:hover {
 }
 
 .about-div .list-div li {
+<<<<<<< HEAD
     line-height: 1.8;
+=======
+    line-height: 1.2;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     text-align: left;
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
     -moz-page-break-inside: avoid;
     page-break-inside: avoid;
     break-inside: avoid-column;
+<<<<<<< HEAD
     list-style: none;
+=======
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 /*# sourceMappingURL=style.css.map */
@@ -919,29 +1030,45 @@ button[type="submit"]:hover {
 /*  Projects
 -----------------------------------*/
 .projects {
+<<<<<<< HEAD
     background: #252525 !important;
     display: none;
+=======
+    background: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 /*  Skills
 -----------------------------------*/
 .skills {
+<<<<<<< HEAD
     background: #252525 !important;
     display: none;
+=======
+    background: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 /*  About
 -----------------------------------*/
 .about {
+<<<<<<< HEAD
     background: #252525 !important;
     display: none;
+=======
+    background: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 /*  Contact
 -----------------------------------*/
 .contact {
+<<<<<<< HEAD
     background: #252525 !important;
     display: none;
+=======
+    background: #212121;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 /*****************************************************************
@@ -1046,8 +1173,13 @@ button[type="submit"]:hover {
     z-index: 9999;
     width: 100%;
     background: #cb354b;
+<<<<<<< HEAD
     height: 0%;
     top: 0;
+=======
+    height: 50%;
+    top: -50%;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     display: block;
 }
 
@@ -1056,6 +1188,7 @@ button[type="submit"]:hover {
     z-index: 9999;
     width: 100%;
     background: #cb354b;
+<<<<<<< HEAD
     height: 0%;
     bottom: 0;
     display: block;
@@ -1078,12 +1211,17 @@ button[type="submit"]:hover {
     background: #cb354b;
     height: 100%;
     left: 0;
+=======
+    height: 50%;
+    bottom: -50%;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     display: block;
 }
 
 #loading_div {
     position: absolute;
     width: 100%;
+<<<<<<< HEAD
     z-index: 9999999;
     background: orange;
     height: 1%;
@@ -1097,6 +1235,14 @@ button[type="submit"]:hover {
 .hovered {
     box-shadow: rgb(33, 29, 28) 1px 1px, rgb(29, 29, 29) 2px 2px, rgb(30, 30, 29) 3px 3px, rgb(31, 31, 30) 4px 4px, rgb(31, 31, 30) 5px 5px, rgb(32, 32, 31) 6px 6px, rgb(32, 32, 31) 7px 7px, rgb(33, 32, 32) 8px 8px, rgb(33, 32, 32) 9px 9px, rgb(33, 33, 33) 10px 10px;
     -webkit-transition: box-shadow 1s;
+=======
+    z-index: 9999;
+    background: #212121;
+    height: 1%;
+    top: 49%;
+    opacity: 0;
+    display: block;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }
 
 #loading_div_charge {
@@ -1104,11 +1250,19 @@ button[type="submit"]:hover {
     width: 0%;
     left: 25%;
     z-index: 9999;
+<<<<<<< HEAD
     background: #832D3A;
     height: 1%;
     opacity: 1;
     //left: 25%;
     top: 49.5%;
+=======
+    background: #BB4456;
+    height: 1%;
+    opacity: 1;
+    //left: 25%;
+    top: 49%;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     display: block;
 }
 
@@ -1124,6 +1278,7 @@ button[type="submit"]:hover {
     opacity: 0;
 }
 
+<<<<<<< HEAD
 svg {
     position: absolute;
     top: 40%;
@@ -1178,14 +1333,21 @@ svg {
     }
 }
 
+=======
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 $hexagon-count: 7;
 $border-width: 0.013em;
 $animation-duration: 8s;
 
 .container {
     position: absolute;
+<<<<<<< HEAD
     top: 38vh;
     left: 50vw;
+=======
+    top: 42%;
+    left: 50%;
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
     width: 0;
     height: 0;
     z-index: 9999;
@@ -1223,7 +1385,11 @@ $animation-duration: 8s;
             transform: translateX(-$border-width / 4) rotate(60deg) translateX($border-width / 4);
         }
         &::after {
+<<<<<<< HEAD
             box-shadow: -2px -3px 5px rgb(33, 29, 28);
+=======
+            box-shadow: -2px -3px 5px  rgb(33, 29, 28);
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
             transform: translateX(-$border-width / 4) rotate(-60deg) translateX($border-width / 4);
         }
         @for $i from 1 through 6 {
@@ -1261,6 +1427,7 @@ $animation-duration: 8s;
     to {
         width: 0%;
     }
+<<<<<<< HEAD
 }
 
 
@@ -1860,4 +2027,6 @@ $animation-duration: 8s;
 
    
 
+=======
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
 }

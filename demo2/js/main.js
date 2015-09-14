@@ -368,7 +368,11 @@ jQuery(document).ready(function(event) {
         });
         tween = TweenMax.to(interrogation, 0.5, {
             css: {
+<<<<<<< HEAD
                 //fontSize: '4.0rem'
+=======
+                fontSize: '4.0rem'
+>>>>>>> ef6f03a56bc94d03c098bf1f547a285d2510184d
             },
             repeat: -1,
             yoyo: true,
