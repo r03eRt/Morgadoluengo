@@ -518,7 +518,8 @@ input {
   margin-bottom: 1.8rem;
   font-family: 'Proxima_Nova', sans-serif;
   position: relative;
-  left: 50vw; }
+  left: 50vw;
+  color: #cb354b; }
 
 textarea {
   width: 100%;
@@ -529,7 +530,8 @@ textarea {
   resize: none;
   left: 40vw;
   position: relative;
-  font-family: 'Proxima_Nova', sans-serif; }
+  font-family: 'Proxima_Nova', sans-serif;
+  color: #cb354b; }
 
 ::-webkit-input-placeholder {
   color: #cb354b;
@@ -565,11 +567,19 @@ button[type="submit"] {
   position: relative;
   left: 40vw;
   font-family: 'Proxima_Nova', sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  -webkit-transition: background 0.5s ease-in-out;
+  -moz-transition: background 0.5s ease-in-out;
+  -ms-transition: background 0.5s ease-in-out;
+  -o-transition: background 0.5s ease-in-out; }
 
 button[type="submit"]:hover {
   background: #cb354b;
-  color: #212121; }
+  color: #212121;
+  -webkit-transition: color 0.5s ease-in-out;
+  -moz-transition: color 0.5s ease-in-out;
+  -ms-transition: color 0.5s ease-in-out;
+  -o-transition: color 0.5s ease-in-out; }
 
 .span1 {
   z-index: 9999;
@@ -1124,6 +1134,17 @@ svg {
   /* Safari */
   transition-duration: 1s; }
 
+input[type=text], textarea {
+  -webkit-transition: box-shadow 0.30s ease-in-out;
+  -moz-transition: box-shadow 0.30s ease-in-out;
+  -ms-transition: box-shadow 0.30s ease-in-out;
+  -o-transition: box-shadow 0.30s ease-in-out;
+  outline: none; }
+
+input[type=text]:focus, textarea:focus, button:focus {
+  box-shadow: 0 0 5px #cb354b;
+  border: 2px solid #cb354b; }
+
 @media all and (max-width: 1024px) and (min-width: 768px) {
   .menu {
     position: absolute;
@@ -1181,10 +1202,12 @@ svg {
 
   input {
     width: 100%;
-    left: 50vw; }
+    left: 50vw;
+    color: #cb354b; }
 
   textarea {
-    left: 50vw; }
+    left: 50vw;
+    color: #cb354b; }
 
   button[type="submit"] {
     left: 50vw; }
