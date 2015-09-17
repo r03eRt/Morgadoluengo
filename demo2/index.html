@@ -79,7 +79,7 @@
            <div class="responsive-menu">
               <ul>
                  <li class="menu_item btn_nav home_link">Home</li>
-                 <li class="menu_item btn_nav menu_item_current about_link">About</li>
+                 <li class="menu_item btn_nav  about_link">About</li>
                  <li class="menu_item btn_nav menu_item_current projects_link">Projects</li>
                  <li class="menu_item btn_nav contact_link">Contact</li>
               </ul>
@@ -95,29 +95,59 @@
         <div id="inner_project" style="bacgkround:violet">
             <div class="project_article">
               <h3>EUREOS</h3>
-              <div class="project_img eureos">
-                
+              <div class="project_img">
+                <a href="#">
+                  <img src="./img/eureosthumb.png" width="100%" height="100%" data="eureos">
+                </a>
               </div>
             </div>
             <div class="project_article">
               <h3>BUNGALOWSCLUB</h3>
-              <div class="project_img bungalowsclub">
-                
+              <div class="project_img" >
+                <a href="#">
+                  <img src="./img/bungalowsclubthumb.png" width="100%" height="100%" data="bungalowsclub">
+                </a>
               </div>
             </div>
             <div class="project_article">
               <h3>ILOVECAMPING</h3>
-              <div class="project_img ilovecamping">
-                
+              <div class="project_img">
+                <a href="#">
+                  <img src="./img/ilovecampingthumb.png" width="100%" height="100%" data="ilovecamping">
+                </a>
               </div>
             </div>
             <div class="project_article">
-              <h3>HOTEL VILLAMADRID</h3>
-              <div class="project_img hotel_villamadrid">
-                
+              <h3>H. VILLAMADRID</h3>
+              <div class="project_img" >
+                <a href="#">
+                  <img src="./img/hotel_villamadridthumb.png" width="100%" height="100%" data="hotel_villamadrid">
+                </a>
               </div>
             </div>
-            <!--<div class="project_article">a</div>-->
+
+
+            <!-- lightbox container hidden with CSS -->
+            <a href="#" class="lightbox" id="eureos">
+              <img src="./img/eureos.png" >
+              <div class="fancy_font">EUREOS.online</div>
+            </a>
+            <!-- lightbox container hidden with CSS -->
+            <a href="#" class="lightbox " id="bungalowsclub">
+              <img src="./img/bungalowsclub.png" >
+              <div class="fancy_font">Bungalowsclub.com</div>
+            </a>
+            <!-- lightbox container hidden with CSS -->
+            <a href="#" class="lightbox " id="ilovecamping">
+                <img src="./img/ilovecamping.png" >
+                <div class="fancy_font">IloveCamping.net</div>
+              </a>
+            </a>
+            <!-- lightbox container hidden with CSS -->
+            <a href="#" class="lightbox " id="hotel_villamadrid">
+                <img src="./img/hotel_villamadrid.png" >
+              <div class="fancy_font">Hotel Villamadrid</div>
+            </a>
         </div>
         
 
@@ -272,7 +302,7 @@
       <div class="cd-contact"  style="overflow:hidden" >
         <main >
           <div class="cd-contact cd-main-content" >
-            <div >
+            <div id="contact-normal" >
                 <!--<div class="span1" style="color:#212121;right: 100vw;position:absolute">What would yo</div>
                 <div class="span2" style="color:#cb354b;left: 150vw;position:absolute">u like to know <span class="span222">?</span></div>-->
                 <div class="span1" style="color:#212121;right: 100vw;position:absolute">What would yo</div>
@@ -292,8 +322,7 @@
                     <i class="fa fa-linkedin fa-fw"></i>
                   </div>
                 </div>
-
-              </div>
+            </div>
               <div class="form-div">
                 <div class="form-content">
                   <form action="demo_form.asp" method="get" id="form1">
@@ -302,13 +331,38 @@
                     <input type="text" name="phone" placeholder="*Phone"><br>
                     <textarea  rows="10" type="text" name="message" placeholder="Message"></textarea>
                   </form>
-                  <button type="submit" form="form1" value="Submit">Submit</button>
+                  <button name="submit" type="submit" form="form1" value="Submit">Submit</button>
                 </div>
               </div>
 
               <div class="hola" ></div>
+            </div>
 
-              
+            <div id="contact-responsive">
+              <div class="contact-div-responsive">
+                <p>
+                  <strong>Roberto Morgado Luengo</strong><br>
+                  Computer Engineer<br>
+                  Web Designer and Developer<br>
+                  +34 659 085 824<br>
+                  morgadoluengo@gmail.com
+                </p>
+              </div>                 
+
+              <p class="span-resp" >What would you like to know ?<p>
+              <div class="form-div-responsive">
+                <div class="form-content-resp">
+                  <form action="demo_form.asp" method="get" id="form1-resp">
+                    <input type="text" name="fullname-resp" placeholder="*Full Name"><br>
+                    <input type="text" name="email-resp" placeholder="*Email"><br>
+                    <input type="text" name="phone-resp" placeholder="*Phone"><br>
+                    <textarea  rows="10" type="text" name="message-resp" placeholder="Message"></textarea>
+                    <button name="submit-resp" type="submit" form="form1-resp" value="Submit">Submit</button>
+
+                  </form>
+                </div>
+
+              </div>
             </div>
           </div>
         </main>
@@ -328,7 +382,7 @@
       <main>
         <div class="cd-index cd-main-content">
             <div>
-              <!--<div class='container'>
+              <div class='container' style="left:0;right: 0;margin: 0 auto;top: 35%;"><!--style="height: 200px;width:200px;background:#cb354b;left:0;right: 0;margin: 0 auto;border-radius:100%;top:25%"-->
                 <div class='hexagon'>
                   <div class='part'></div>
                   <div class='part'></div>
@@ -385,7 +439,8 @@
                   <div class='part'></div>
                   <div class='part'></div>
                 </div>
-              </div>-->
+
+              </div>
               <h1><a class="red" >ROBERTO MORGADO LUENGO</a></h1>
             </div>
         </div>

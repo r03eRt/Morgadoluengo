@@ -49,7 +49,7 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow: hidden;
-    cursor:default;
+    cursor: default;
 }
 
 a {
@@ -1305,9 +1305,8 @@ $animation-duration: 8s;
             float: left;
             text-align: center;
             .project_img {
-                            cursor: pointer;
-
-                height: 75%;
+                cursor: pointer;
+                height: 80%;
                 width: 100%;
                 &:hover {
                     -moz-filter: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg'><filter id='grayscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0'/></filter></svg>#grayscale");
@@ -1333,41 +1332,97 @@ $animation-duration: 8s;
 }
 
 .ilovecamping {
-    background-image: url("../img/ilovecampingthumb.png");
-    background-size: cover;
+    //background-image: url("../img/ilovecampingthumb.png");
+    //background-size: cover;
     @include gray_mix;
 }
 
 .eureos {
-    background-image: url("../img/eureosthumb.png");
-    background-size: cover;
+    //background-image: url("../img/eureosthumb.png");
+    //background-size: cover;
     @include gray_mix;
 }
 
 .bungalowsclub {
-    background-image: url("../img/bungalowsclubthumb.png");
-    background-size: cover;
+    //background-image: url("../img/bungalowsclubthumb.png");
+    //background-size: cover;
     @include gray_mix;
 }
 
 .hotel_villamadrid {
-    background-image: url("../img/hotel_villamadridthumb.png");
-    background-size: cover;
+    //background-image: url("../img/hotel_villamadridthumb.png");
+    //background-size: cover;
     @include gray_mix;
 }
 
 input[type=text], textarea {
-  -webkit-transition: box-shadow 0.30s ease-in-out;
-  -moz-transition: box-shadow 0.30s ease-in-out;
-  -ms-transition: box-shadow 0.30s ease-in-out;
-  -o-transition: box-shadow 0.30s ease-in-out;
-  outline: none;
-
+    -webkit-transition: box-shadow 0.30s ease-in-out;
+    -moz-transition: box-shadow 0.30s ease-in-out;
+    -ms-transition: box-shadow 0.30s ease-in-out;
+    -o-transition: box-shadow 0.30s ease-in-out;
+    outline: none;
 }
- 
-input[type=text]:focus, textarea:focus,button:focus {
-  box-shadow: 0 0 5px#cb354b;
-  border: 2px solid #cb354b;
+
+input[type=text]:focus, textarea:focus, button:focus {
+    box-shadow: 0 0 5px #cb354b;
+    border: 2px solid #cb354b;
+}
+
+.contact-normal {
+    display: block;
+}
+
+.contact-responsive {
+    display: none;
+}
+
+.imagefull {
+    background: url("./img/ilovecamping-compressor.png");
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    position: absolute;
+}
+
+/** LIGHTBOX MARKUP **/
+
+.lightbox {
+    /** Default lightbox to hidden */
+    /*display: none;*/
+    /** Position and style */
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 100%;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.lightbox img {
+    /** Pad the lightbox image */
+    /** Pad the lightbox image */
+    max-width: 90%;
+    max-height: 80%;
+    margin-top: 2%;
+}
+
+.lightbox:target {
+    /** Remove default browser outline */
+    outline: none;
+    /** Unhide lightbox **/
+    display: block;
+}
+
+.fancy_font {
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #cb354b;
+    line-height: initial;
+    font-weight: 300;
 }
 
 @media all and (max-width: 1024px) and (min-width: 768px) {
@@ -1399,7 +1454,6 @@ input[type=text]:focus, textarea:focus,button:focus {
     }
     button[type="submit"] {
         left: 50vw;
-
     }
     .about-div {
         top: 10%;
@@ -1410,18 +1464,21 @@ input[type=text]:focus, textarea:focus,button:focus {
         color: #9d9d9d;
         padding-right: 1rem;
     }
-
-
-.photo-div-inner {
-    top: 20%;
-    background-size: 100%;
-}
-
+    .photo-div-inner {
+        top: 20%;
+        background-size: 100%;
+    }
+    .lightbox img {
+        max-width: 90%;
+        max-height: 80%;
+        margin-top: 10%;
+    }
+    .home h1 {
+        margin-top: 30%;
+    }
 }
 
 @media all and (max-width: 767px) and (min-width: 481px) {
-
-
     #container_project #inner_project .project_article {
         width: 48%;
         margin: 1%;
@@ -1441,7 +1498,7 @@ input[type=text]:focus, textarea:focus,button:focus {
     }
     textarea {
         left: 50vw;
-        color:#cb354b;
+        color: #cb354b;
     }
     button[type="submit"] {
         left: 50vw;
@@ -1464,8 +1521,8 @@ input[type=text]:focus, textarea:focus,button:focus {
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
-    .name{
-        display:none;
+    .name {
+        display: none;
     }
     .photo-div-inner {
         top: 0% !important;
@@ -1493,7 +1550,6 @@ input[type=text]:focus, textarea:focus,button:focus {
         padding-right: 4rem !important;
         padding-left: 2rem !important;
     }
-
     .menu {
         display: none !important;
     }
@@ -1542,17 +1598,17 @@ input[type=text]:focus, textarea:focus,button:focus {
         position: relative;
     }
     .responsive-menu {
-        display: none;
+        // display: none;
+   
     }
     .responsive-menu > ul > li {
-
         color: #cb354b;
         background: white;
         text-align: center;
         color: #555255;
         padding: 0 2.0rem;
-        font-size: 2.2rem!important;
-        font-weight: bold!important;
+        font-size: 2.2rem !important;
+        font-weight: bold !important;
         line-height: initial;
         font-weight: 300;
         text-shadow: #211d1c 1px 1px, #1d1d1d 2px 2px, #1e1e1d 3px 3px, #1f1f1e 4px 4px, #1f1f1e 5px 5px, #20201f 6px 6px, #20201f 7px 7px, #212020 8px 8px, #212020 9px 9px, #212121 10px 10px;
@@ -1560,12 +1616,7 @@ input[type=text]:focus, textarea:focus,button:focus {
         line-height: 5rem;
         list-style: none;
     }
-    .expand {
-        display: block !important;
-    }
-
-
-     .mobile-nav2 {
+    .mobile-nav2 {
         display: block;
         box-shadow: 0px 0px 0px #1d1d1d;
         -moz-box-shadow: 0px 0px 0px #1d1d1d;
@@ -1619,8 +1670,8 @@ input[type=text]:focus, textarea:focus,button:focus {
         text-align: center;
         color: #555255;
         padding: 0 2.0rem;
-        font-size: 2.2rem!important;
-        font-weight: bold!important;
+        font-size: 2.2rem !important;
+        font-weight: bold !important;
         line-height: initial;
         font-weight: 300;
         text-shadow: #211d1c 1px 1px, #1d1d1d 2px 2px, #1e1e1d 3px 3px, #1f1f1e 4px 4px, #1f1f1e 5px 5px, #20201f 6px 6px, #20201f 7px 7px, #212020 8px 8px, #212020 9px 9px, #212121 10px 10px;
@@ -1628,7 +1679,57 @@ input[type=text]:focus, textarea:focus,button:focus {
         line-height: 5rem;
         list-style: none;
     }
-
+    .form-content {
+        text-align: center !important;
+        position: relative;
+        top: 25%;
+        display: block;
+        width: 90%;
+        margin: 0 5%;
+    }
+    input {
+        width: 100%;
+        left: 0vw;
+    }
+    textarea {
+        left: 0vw;
+    }
+    button[name="submit-resp"] {
+        left: 0vw;
+    }
+    #contact-normal {
+        display: none !important;
+    }
+    #contact-responsive {
+        display: block !important;
+    }
+    #contact-responsive {
+        height: 100vh !important;
+    }
+    .contact-div-responsive {
+        color: #cb354b;
+        padding: 70px 0px;
+    }
+    .form-div-responsive {
+        color: black;
+    }
+    .form-content-resp {
+        width: 80%;
+        margin: 0% 10%;
+    }
+    .span-resp {
+        color: #cb354b;
+        font-size: x-large;
+        margin-bottom: 25px;
+    }
+    .lightbox img {
+        max-width: 90%;
+        max-height: 80%;
+        margin-top: 35%;
+    }
+    .home h1 {
+        margin-top: 45% !important;
+    }
 }
 
 @media all and (max-width: 30em) {
@@ -1695,7 +1796,7 @@ input[type=text]:focus, textarea:focus,button:focus {
         -webkit-overflow-scrolling: touch;
     }
     .home h1 {
-        margin-top: 25vh !important;
+        margin-top: 30vh !important;
     }
     .page__style .about {
         overflow-y: scroll;
@@ -1710,13 +1811,13 @@ input[type=text]:focus, textarea:focus,button:focus {
     }
     input {
         width: 100%;
-        left: 50vw;
+        left: 0vw;
     }
     textarea {
-        left: 50vw;
+        left: 0vw;
     }
-    button[type="submit"] {
-        left: 50vw;
+    button[name="submit-resp"] {
+        left: 0vw;
     }
     .span1 {
         font-size: 2.5rem !important;
@@ -1744,9 +1845,6 @@ input[type=text]:focus, textarea:focus,button:focus {
     }
     #loader {
         display: none;
-    }
-    .menu {
-        display: none !important;
     }
     .mobile-nav {
         display: block;
@@ -1802,8 +1900,8 @@ input[type=text]:focus, textarea:focus,button:focus {
         text-align: center;
         color: #555255;
         padding: 0 2.0rem;
-        font-size: 2.2rem!important;
-        font-weight: bold!important;
+        font-size: 2.2rem !important;
+        font-weight: bold !important;
         line-height: initial;
         font-weight: 300;
         text-shadow: #211d1c 1px 1px, #1d1d1d 2px 2px, #1e1e1d 3px 3px, #1f1f1e 4px 4px, #1f1f1e 5px 5px, #20201f 6px 6px, #20201f 7px 7px, #212020 8px 8px, #212020 9px 9px, #212121 10px 10px;
@@ -1811,15 +1909,19 @@ input[type=text]:focus, textarea:focus,button:focus {
         line-height: 5rem;
         list-style: none;
     }
-     .expand {
-        display: block !important;
+    .expand {
+        //display: block !important;
+   
     }
-
-
-
-
-
-
+    .menu {
+        display: none !important;
+    }
+    .menu_item_current {
+        color: #cb354b !important;
+    }
+    .container {
+        display: none !important;
+    }
     .mobile-nav2 {
         display: block;
         box-shadow: 5px 5px 5px #1d1d1d;
@@ -1874,8 +1976,8 @@ input[type=text]:focus, textarea:focus,button:focus {
         text-align: center;
         color: #555255;
         padding: 0 2.0rem;
-        font-size: 2.2rem!important;
-        font-weight: bold!important;
+        font-size: 2.2rem !important;
+        font-weight: bold !important;
         line-height: initial;
         font-weight: 300;
         text-shadow: #211d1c 1px 1px, #1d1d1d 2px 2px, #1e1e1d 3px 3px, #1f1f1e 4px 4px, #1f1f1e 5px 5px, #20201f 6px 6px, #20201f 7px 7px, #212020 8px 8px, #212020 9px 9px, #212121 10px 10px;
@@ -1883,8 +1985,34 @@ input[type=text]:focus, textarea:focus,button:focus {
         line-height: 5rem;
         list-style: none;
     }
-
-
-   
-
+    #contact-responsive {
+        height: 100vh !important;
+    }
+    .contact-div-responsive {
+        color: #cb354b;
+        padding: 70px 0px;
+    }
+    .form-div-responsive {
+        color: black;
+    }
+    .form-content-resp {
+        width: 80%;
+        margin: 0% 10%;
+    }
+    .span-resp {
+        color: #cb354b;
+        font-size: x-large;
+        margin-bottom: 25px;
+    }
+    #contact-normal {
+        display: none !important;
+    }
+    #contact-responsive {
+        display: block !important;
+    }
+    .lightbox img {
+        max-width: 90%;
+        max-height: 80%;
+        margin-top: 71%;
+    }
 }

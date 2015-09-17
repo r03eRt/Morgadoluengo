@@ -346,24 +346,27 @@ MIAPLICACION = {
     //mostrar contenido durante la transicion
     click_en_menu:function(){
       // on click show page after 1500ms
-      $('.home_link,.name').click(function() {
+      $('.home_link,.name').click(function() { 
+          jQuery('.responsive-menu').slideUp();
+          jQuery('.responsive-menu').removeClass('.expand');
+
           tl.resume(); //resumo loop
           jQuery('.responsive-menu').removeClass('expand');
-
+          $('.contact').css('display','none');
           setTimeout(function() {
               $('.home').css('display','block');
               $('.home').addClass('fadeIn');
           }, 1500);
-         $('about').css('display','none');
-         $('skills').css('display','none');
-         $('projects').css('display','none');
-         $('contact').css('display','none');
+         $('.about').css('display','none');
+         $('.skills').css('display','none');
+         $('.projects').css('display','none');
+         $('.contact').css('display','none');
 
       });
 
       $('.projects_link').click(function() {
-          jQuery('.responsive-menu').removeClass('expand');
-          
+          jQuery('.responsive-menu').slideUp();
+          jQuery('.responsive-menu').removeClass('.expand');          
           setTimeout(function() {         
               $('.projects').addClass('fadeIn');
               $('.projects').css('display','block');
@@ -377,7 +380,8 @@ MIAPLICACION = {
       });
 
       $('.skills_link').click(function() {
-          jQuery('.responsive-menu').removeClass('expand');
+          jQuery('.responsive-menu').slideUp();
+          jQuery('.responsive-menu').removeClass('.expand');
 
 
           setTimeout(function() {
@@ -392,7 +396,8 @@ MIAPLICACION = {
       });
 
       $('.about_link,#continue_div').click(function() {
-          jQuery('.responsive-menu').removeClass('expand');
+          jQuery('.responsive-menu').slideUp();
+          jQuery('.responsive-menu').removeClass('.expand');
 
           setTimeout(function() {
               $('.about').css('display', 'block');
@@ -407,7 +412,8 @@ MIAPLICACION = {
 
       });
       $('.contact_link').click(function() {
-          jQuery('.responsive-menu').removeClass('expand');
+          jQuery('.responsive-menu').slideUp();
+          jQuery('.responsive-menu').removeClass('.expand');
 
           setTimeout(function() {
               $('.contact').css('display', 'block');
@@ -461,8 +467,8 @@ MIAPLICACION = {
               var fullname = $('input[name="fullname"]');
               var phone = $('input[name="phone"]');
               var email = $('input[name="email"]');
-              var message = $('textarea');
-              var button = $('button[type="submit"]');
+              var message = $('textarea[name="message"]');
+              var button = $('button[name="submit"]');
               var span1 = $('.span1');
               var span2 = $('.span2');
               var interrogation = $('.span222');
@@ -638,7 +644,7 @@ $(document).ready(function() {
     });
 
     jQuery('.menu-btn').click(function() {
-        jQuery('.responsive-menu').toggleClass('expand');
+        jQuery('.responsive-menu').toggleClass('expand').slideToggle();
         isOpen = !isOpen;
         var firstspan = jQuery('.first');
         var secondspan = jQuery('.second');
@@ -646,20 +652,20 @@ $(document).ready(function() {
 
 
         if (isOpen) {
-            toggleTween1 = TweenLite.to(firstspan, 1, {
+            toggleTween1 = TweenLite.to(firstspan, 0.8, {
 
                 y: +11,
                 rotation: 45,
                 force3D: true,
                 ease: Power4.easeInOut
             });
-            toggleTween2 = TweenLite.to(secondspan, 1, {
+            toggleTween2 = TweenLite.to(secondspan, 0.8, {
 
                 x: 100,
                 force3D: true,
                 ease: Power4.easeInOut
             });
-            toggleTween3 = TweenLite.to(thirdspan, 1, {
+            toggleTween3 = TweenLite.to(thirdspan, 0.8, {
 
                 y: -11,
                 rotation: -45,
@@ -669,20 +675,20 @@ $(document).ready(function() {
             });
 
         } else {
-            TweenLite.to(firstspan, 1, {
+            TweenLite.to(firstspan, 0.8, {
 
                 y: 0,
                 rotation: 0,
                 force3D: true,
                 ease: Power4.easeInOut
             });
-            TweenLite.to(secondspan, 1, {
+            TweenLite.to(secondspan, 0.8, {
 
                 x: 0,
                 force3D: true,
                 ease: Power4.easeInOut
             });
-            TweenLite.to(thirdspan, 1, {
+            TweenLite.to(thirdspan, 0.8, {
 
                 y: 0,
                 rotation: 0,
@@ -716,6 +722,32 @@ $(document).ready(function() {
     TweenLite.to('.fa-linkedin', 0, {
         opacity: 0
     });
+
+
+    $('.project_img a img').click(function(){
+      var seleccionado=$(this).attr('data');
+      var lb=$("#"+seleccionado+"");
+      TweenMax.fromTo(lb, 1, {
+                top: "100%"},
+                {top:'0%',
+                force3D: true,
+                ease: Power4.easeInOut }
+                );
+       lb.click(function(){
+        TweenMax.fromTo(lb, 1, {
+                top: "0%"},
+                {top:'100%',
+                force3D: true,
+                ease: Power4.easeInOut }
+                );
+      });
+
+    });
+
+   
+
+
+
 
 
 });
