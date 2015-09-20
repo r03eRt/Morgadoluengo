@@ -6,9 +6,6 @@ var MIAPLICACION = MIAPLICACION || {};
 
 // Creación del contenedor llamado MIAPLICACION.metodoComun de método y propiedades comunes.
 MIAPLICACION = {
-  //regExParaNombre: "", // define regex para la validación del nombre
-  //regExParaTelefono: "", // define regex para validación del teléfono
-
 
 
   //funcion que activa el boton de continue
@@ -43,12 +40,26 @@ MIAPLICACION = {
 
   mostrar_homepage: function (tl){
     //mostramos la pagina principal desde lo oscuro
-    TweenMax.fromTo(document.getElementsByClassName('container'), 5, {
-        autoAlpha: 0
-    }, {
-        autoAlpha: 1,
-        delay: 1
-    });
+
+    var ua = navigator.userAgent.toLowerCase(); 
+    if (ua.indexOf('safari') != -1) { 
+      if (ua.indexOf('chrome') > -1) {
+        //alert("1") // Chrome
+        TweenMax.fromTo(document.getElementsByClassName('container'), 5, {
+            autoAlpha: 0
+        }, {
+            autoAlpha: 1,
+            delay: 1
+        });
+      } else {
+        //alert("2") // Safari
+      }
+    }
+
+
+    
+
+
     TweenMax.fromTo(document.getElementsByClassName('red'), 5, {
         autoAlpha: 0
     }, {
@@ -88,7 +99,7 @@ MIAPLICACION = {
         var ball2 = document.getElementById('ball2');
         var ball3 = document.getElementById('ball3');
         var loader = document.getElementById('loader');
-        TweenLite.to(loader, 0, {
+        TweenLite.to(loader, 1, {
             zIndex: 99999
         });
         TweenLite.to(ball1, 1, {
@@ -448,7 +459,7 @@ MIAPLICACION = {
                   delay: 3,
                   display: 'inline'
               });
-              TweenLite.to('.fa-twitter', 2, {
+              TweenLite.to('.fa-envelope-o', 2, {
                   delay: 4,
                   autoAlpha: 1
               });
@@ -577,7 +588,7 @@ MIAPLICACION.click_en_menu();
 
 
 $(document).ready(function() {
-
+    jQuery.fx.interval=1;
     var isOpen = false;
 
     jQuery('.menu-btn2').click(function() {
@@ -741,11 +752,90 @@ $(document).ready(function() {
                 ease: Power4.easeInOut }
                 );
       });
-
+       TweenLite.to(lb, 1, {
+                delay:1,
+                css: {
+                    'background':'rgba(0, 0, 0, 0.8)'
+                },
+               
+                force3D: true
+            });
     });
 
    
+jQuery("#form1 ").submit(function() {
 
+                      var url = "http://morgadoluengo.com/morgadoluengo/demo2/mail-sender-script.php"; // the script where you handle the form input.
+
+                      $.ajax({
+                             type: "POST",
+                             url: url,
+                             data: $("#form1").serialize(), // serializes the form's elements.
+                             success: function(data)
+                             {
+                                //jQuery('.ok_form').show();
+                                 //alert(data); // show response from the php script.
+                                 if(data){
+                                   jQuery('.ok_form').fadeIn("4000");
+                                   jQuery('.ok_form').text("Thanks for contact!! :)"); 
+                                   setTimeout(function(){ 
+                                  jQuery('.ok_form').fadeOut("4000"); 
+                                }, 10000);
+                            
+                                 }else{
+                                    jQuery('.ok_form').css('color','#cb344b');
+                                    jQuery('.ok_form').fadeIn("4000");
+                                    jQuery('.ok_form').text("Something happend try other time :("); 
+                                    setTimeout(function(){ 
+                                  jQuery('.ok_form').fadeOut("4000"); 
+                                }, 10000);
+                             
+                                 }
+                                 
+                             }
+
+                           });
+                     
+
+                      return false; // avoid to execute the actual submit of the form.
+                  });
+
+jQuery("#form1-resp ").submit(function() {
+
+                      var url = "http://morgadoluengo.com/morgadoluengo/demo2/mail-sender-script.php"; // the script where you handle the form input.
+
+                      $.ajax({
+                             type: "POST",
+                             url: url,
+                             data: $("#form1-resp").serialize(), // serializes the form's elements.
+                             success: function(data)
+                             {
+                                //jQuery('.ok_form').show();
+                                 //alert(data); // show response from the php script.
+                                 if(data){
+                                   jQuery('.ok_form').fadeIn("4000");
+                                   jQuery('.ok_form').text("Thanks for contact!! :)"); 
+                                   setTimeout(function(){ 
+                                  jQuery('.ok_form').fadeOut("4000"); 
+                                }, 10000);
+                            
+                                 }else{
+                                    jQuery('.ok_form').css('color','#cb344b');
+                                    jQuery('.ok_form').fadeIn("4000");
+                                    jQuery('.ok_form').text("Something happend try other time :("); 
+                                    setTimeout(function(){ 
+                                  jQuery('.ok_form').fadeOut("4000"); 
+                                }, 10000);
+                             
+                                 }
+                                 
+                             }
+
+                           });
+                     
+
+                      return false; // avoid to execute the actual submit of the form.
+                  });
 
 
 
